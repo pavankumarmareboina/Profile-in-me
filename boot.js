@@ -15,25 +15,6 @@ function wind() {
 }
 
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let nameTag = document.querySelector('.naparu')
 nameTag.innerText='pavan technology'
 nameTag.style.backgroundColor='yellow'
@@ -76,3 +57,27 @@ bton1.addEventListener('click', function(){
 
 
  })
+
+//--------------multible table---------------------//
+
+ let entNUm = document.querySelector('.numb')
+ entNUm.addEventListener('keyup',function(){
+  let val = entNUm.value
+  document.querySelector('.multiple').innerText = val
+  calculate()
+ })
+ 
+ let rangem =document.querySelector('.rangem')
+ rangem.addEventListener('input',function(){
+  let val2 = rangem.value
+  document.querySelector('.multiply').innerText = val2
+  calculate()
+ })
+
+ let calculate = ()=>{
+  let num1 = document.querySelector('.multiple').innerText 
+  let num2 = document.querySelector('.multiply').innerText 
+  let mathResult = num1 * num2
+  document.querySelector('.ans').innerText= mathResult
+ 
+ }
