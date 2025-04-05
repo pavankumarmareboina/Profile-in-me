@@ -4,6 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+      color: rgb(244, 10, 10);
+      margin: 12px;
+    }
+    .cont{
+      border: 1px solid;
+      height: 150px;
+      background-color: rgb(11, 14, 11);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgb(177, 20, 20);
+    }
+    .row{
+      text-align: center;
+    }
+    .col{
+      display: flex;
+    justify-content: center;
+      align-items: center;
+    }
+    .rangem{
+     width: 400px;
+    
+    }
+    .numb{
+      width: 300px;
+      height: 40px;
+      border-radius: 7px;
+    }
+    .cont2{
+     color: rgb(0, 0, 0);
+      border: 1px solid;
+      height: 120px;
+     margin-top: 6px;
+     background-color: rgb(2, 3, 3);
+    }
+    .row2{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 22px;
+    }
+    .multiple{
+
+    }
+  </style>
 </head>
 <body>
   <h1 class="ms"></h1>
@@ -39,7 +86,25 @@
 <button onclick="wind()">open</button>
 
 
+<div class="cont">
+ <div class="row">
+  <h1>MULTIPLICATION</h1>
+  <div class="col">
+    <input class="numb" type="number" name="" id="" placeholder="Enter number">
+    <input class="rangem" type="range" min="1" max="10">
+  </div>
+ </div>
+</div>
 
+<div class="cont2">
+<div class="row2">
+  <h1 class="multiple" >1</h1>
+  <h1><i class="fa-solid fa-xmark"></i></h1>
+  <h1 class="multiply">1</h1>
+  <h1><i class="fa-solid fa-equals"></i></h1>
+  <h1 class="ans">1</h1>
+</div>
+</div>
 
 
 
