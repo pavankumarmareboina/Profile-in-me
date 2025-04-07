@@ -47,8 +47,21 @@
       align-items: center;
       margin: 22px;
     }
-    .multiple{
-
+    .sw{
+      color: aliceblue;
+      background-color: darkslategray;
+      border: 1px solid;
+      align-items: center;
+      text-align: center;
+     font-size: 44px;
+    }
+    .btn button{
+     font-size: 34px;
+     border-radius: 50px;
+     cursor: pointer;
+     background-color: black;
+     color: aliceblue;
+     width: 122px;
     }
   </style>
 </head>
@@ -83,7 +96,7 @@
   </form>
 
 
-<button onclick="wind()">open</button>
+<!-- <button onclick="wind()">open</button> -->
 
 
 <div class="cont">
@@ -107,9 +120,19 @@
 </div>
 
 
-
-
-
+<div class="stopw">
+  <div class="sw">
+    <h3>Stop Watch</h3>
+    <span class="mint">00</span>:
+    <span class="scnd">00</span>:
+    <span class="m-scnd">00</span>
+    <div class="btn">
+      <button class="btn-start">Start</button>
+      <button class="btn-stop">Stop</button>
+      <button class="btn-resest">Reset</button>
+    </div>
+  </div>
+</div>
 
   <script src="./boot.js"></script>
 </body>
