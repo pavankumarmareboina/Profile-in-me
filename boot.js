@@ -128,40 +128,114 @@ let zeroAdd = (time) => {
 
 // /////////////////////// form validation //////////////////////////
 
-let form = document.querySelector('.form-v')
-form.addEventListener('submit', function(event){
-  event.preventDefault();  //------it stops auto submissions ---------//
-    vallidForm();
+let regestrationValid = document.querySelector('.form-v')
+
+regestrationValid.addEventListener('submit',function(run){
+  run.preventDefault();
+  if (validForm()){
+    alert('successfully upload')
+    run.target.reset();
+  }
 })
 
-let vallidForm = ()=>{
-  checkUsername ();
+let validForm = ()=>{
+  return (checkUsername ()& checkEmail()& checkPassword ()& confirmPassword())
 }
 
 let checkUsername = ()=>{
-  usID = document.querySelector('#username')
-  usIDfeedback = document.querySelector('#username-feedback')
-  let regexpre = /^[a-zA-Z\-]+$/;
-  if (regexpre.test(usID.value)){
-    makeValid = (usID,usIDfeedback)
+  let usernameEl = document.querySelector('#username')
+  let usernameFeedback = document.querySelector('#username-feedback')
+  let regExp = /^[a-zA-Z0-9]{4,10}$/
+  if(regExp.test(usernameEl.value)){
+    makeValid(usernameEl,usernameFeedback)
+    return true
   }
   else{
-    makeinValid = (usID,usIDfeedback)
+    makeInValid(usernameEl,usernameFeedback)
+    return false
   }
 }
 
-let makeValid = (usID,usIDfeedback)=>{
-  usID.classList.add('is-form-valid')
-  usID.classList.remove('is-form-invalid')
-  usIDfeedback.classList.add('is-text-success')
-  usIDfeedback.classList.remove('is-text-danger')
-  usIDfeedback.innerText='valid text available'
+let checkEmail = ()=>{
+  let usernameEl = document.querySelector('#email')
+  let usernameFeedback = document.querySelector('#email-feedback')
+  let regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+  if(regExp.test(usernameEl.value)){
+    makeValid(usernameEl,usernameFeedback)
+    return true
+  }
+  else{
+    makeInValid(usernameEl,usernameFeedback)
+    return false
+  }
 }
 
-let makeinValid = (usID,usIDfeedback)=>{
-  usID.classList.remove('is-form-valid')
-  usID.classList.add('is-form-invalid')
-  usIDfeedback.classList.remove('is-text-success')
-  usIDfeedback.classList.add('is-text-danger')
-  usIDfeedback.innerText=`invalid text !!!!!${usID.placeholder}`
+let checkPassword = ()=>{
+  let usernameEl = document.querySelector('#password')
+  let usernameFeedback = document.querySelector('#password-feedback')
+  let regExp = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
+  if(regExp.test(usernameEl.value)){
+    makeValid(usernameEl,usernameFeedback)
+    return true
+  }
+  else{
+    makeInValid(usernameEl,usernameFeedback)
+    return false
+  }
 }
+
+let confirmPassword = ()=>{
+  let usernameEl = document.querySelector('#c-password')
+  let confirmPass = document.querySelector('#password')
+  let usernameFeedback = document.querySelector('#confirm-password')
+  let regExp = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
+  if(regExp.test(usernameEl.value) && usernameEl.value === confirmPass.value){
+    makeValid(usernameEl,usernameFeedback)
+    return true
+  }
+  else{
+    makeInValid(usernameEl,usernameFeedback)
+    return false
+  }
+}
+
+
+
+let makeValid = (usernameEl,usernameFeedback)=>{
+  usernameEl.classList.add('is-form-valid')
+  usernameEl.classList.remove('is-form-invalid')
+  usernameFeedback.classList.add('is-text-success')
+  usernameFeedback.classList.remove('is-text-danger')
+  usernameFeedback.innerHTML='valid text ....'
+
+}
+let makeInValid = (usernameEl,usernameFeedback)=>{
+  usernameEl.classList.remove('is-form-valid')
+  usernameEl.classList.add('is-form-invalid')
+  usernameFeedback.classList.remove('is-text-success')
+  usernameFeedback.classList.add('is-text-danger')
+  usernameFeedback.innerHTML='invalid text !!!!!!'
+
+}
+
+///---------------keyup for form ----------------------------///
+
+let unEl = document.querySelector('#username')
+unEl.addEventListener('keyup',function(){
+  checkUsername();
+})
+
+let emailEl = document.querySelector('#email')
+emailEl.addEventListener('keyup',function(){
+  checkEmail();
+})
+
+let passwordEl = document.querySelector('#password')
+passwordEl.addEventListener('keyup',function(){
+  checkPassword();
+})
+
+let confirmPassEl = document.querySelector('#confirm-password')
+confirmPassEl.addEventListener('keyup',function(){
+  confirmPassword();
+})

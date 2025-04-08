@@ -92,21 +92,22 @@
   }
   #submit-btn{
     width: 70px;
+    cursor: pointer;
   }
   .is-form-valid{
     border: 2px solid limegreen !important;
    box-shadow: 0 0 4px limegreen;
   }
   .is-form-invalid{
-    border: 2px solid red;
-    box-shadow: 0 0 4px red;
+    border: 2px solid rgb(140, 31, 31);
+    box-shadow: 0 0 4px rgb(177, 15, 15);
   }
 
   .is-text-success{
     color: limegreen !important;
   }
   .is-text-danger{
-    color: red !important;
+    color: rgb(180, 45, 45) !important;
   }
 
 
