@@ -123,3 +123,45 @@ let zeroAdd = (time) => {
     return time;
   }
 };
+
+
+
+// /////////////////////// form validation //////////////////////////
+
+let form = document.querySelector('.form-v')
+form.addEventListener('submit', function(event){
+  event.preventDefault();  //------it stops auto submissions ---------//
+    vallidForm();
+})
+
+let vallidForm = ()=>{
+  checkUsername ();
+}
+
+let checkUsername = ()=>{
+  usID = document.querySelector('#username')
+  usIDfeedback = document.querySelector('#username-feedback')
+  let regexpre = /^[a-zA-Z\-]+$/;
+  if (regexpre.test(usID.value)){
+    makeValid = (usID,usIDfeedback)
+  }
+  else{
+    makeinValid = (usID,usIDfeedback)
+  }
+}
+
+let makeValid = (usID,usIDfeedback)=>{
+  usID.classList.add('is-form-valid')
+  usID.classList.remove('is-form-invalid')
+  usIDfeedback.classList.add('is-text-success')
+  usIDfeedback.classList.remove('is-text-danger')
+  usIDfeedback.innerText='valid text available'
+}
+
+let makeinValid = (usID,usIDfeedback)=>{
+  usID.classList.remove('is-form-valid')
+  usID.classList.add('is-form-invalid')
+  usIDfeedback.classList.remove('is-text-success')
+  usIDfeedback.classList.add('is-text-danger')
+  usIDfeedback.innerText=`invalid text !!!!!${usID.placeholder}`
+}

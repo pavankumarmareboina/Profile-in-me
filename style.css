@@ -1,0 +1,112 @@
+*{
+    /* color: rgb(244, 10, 10); */
+  }
+  .cont{
+    color: white;
+    border: 1px solid;
+    height: 150px;
+    background-color: rgb(219, 150, 45);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgb(177, 20, 20);
+  }
+  .row{
+    text-align: center;
+  }
+  .col{
+    display: flex;
+  justify-content: center;
+    align-items: center;
+  }
+  .rangem{
+   width: 400px;
+  
+  }
+  .numb{
+    width: 300px;
+    height: 40px;
+    border-radius: 7px;
+  }
+  .cont2{
+   color: rgb(255, 255, 255);
+    border: 1px solid;
+    height: 120px;
+   margin-top: 6px;
+   background-color: rgb(125, 16, 203);
+  }
+  .row2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 22px;
+  }
+  .sw{
+    color: aliceblue;
+    background-color: darkslategray;
+    border: 1px solid;
+    align-items: center;
+    text-align: center;
+   font-size: 44px;
+  }
+  .btn button{
+   font-size: 34px;
+   border-radius: 50px;
+   cursor: pointer;
+   background-color: black;
+   color: aliceblue;
+   width: 122px;
+  }
+
+
+
+
+
+
+
+  .cont-form{
+    margin: 12px;
+  }
+  .form-v{
+    text-align: center;
+    background-color: slategrey;
+    margin: auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 0 5px yellow;
+  padding: 12px;
+  }
+  .form-v input{
+    margin: 5px;
+    width: 300px;
+    height: 33px;
+  border-radius: 5px;
+  
+  }
+  .f-name{
+    color: rgb(10, 2, 2);
+    font-weight: bold;
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #submit-btn{
+    width: 70px;
+  }
+  .is-form-valid{
+    border: 2px solid limegreen !important;
+   box-shadow: 0 0 4px limegreen;
+  }
+  .is-form-invalid{
+    border: 2px solid red;
+    box-shadow: 0 0 4px red;
+  }
+
+  .is-text-success{
+    color: limegreen !important;
+  }
+  .is-text-danger{
+    color: red !important;
+  }
+
+
