@@ -239,3 +239,15 @@ let confirmPassEl = document.querySelector('#confirm-password')
 confirmPassEl.addEventListener('keyup',function(){
   confirmPassword();
 })
+
+
+
+
+//--------------------Class constructor---------------------------//
+
+let rseult = "";
+let numbers = (firstNum,endNum)=>{
+  for (i = firstNum; i<= endNum; i++){
+    rseult += `${i}`
+  }
+}
