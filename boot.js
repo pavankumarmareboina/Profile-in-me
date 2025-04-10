@@ -245,9 +245,28 @@ confirmPassEl.addEventListener('keyup',function(){
 
 //--------------------Class constructor---------------------------//
 
-let rseult = "";
-let numbers = (firstNum,endNum)=>{
-  for (i = firstNum; i<= endNum; i++){
-    rseult += `${i}`
+
+class cricket {  // parent class
+  constructor(name,selceted,attendDate){
+    this.name = name
+    this.selceted = selceted
+    this.attendDate = attendDate
+  }
+  comingAt(){
+    console.log(`hello ${this.name} you selected in ${this.selceted} please attend mumbai at the date of ${this.attendDate}`)
   }
 }
+class employe extends cricket { // child class but must extends child attach
+  constructor(person,disnigination){
+    super();
+    this.person=person
+    this.disnigination =disnigination
+  }
+  printName(){
+    console.log(`today we join new employee is :${this.person} and his role ${this.disnigination}`)
+  }
+}
+const cricks = new cricket ('pavan','INDIA U19 TOUR AUSTRILA','20 April 2025');
+const newEmployee = new employe ('pavan','jr employee');
+newEmployee.printName()
+cricks.comingAt();
