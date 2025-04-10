@@ -270,3 +270,18 @@ const cricks = new cricket ('pavan','INDIA U19 TOUR AUSTRILA','20 April 2025');
 const newEmployee = new employe ('pavan','jr employee');
 newEmployee.printName()
 cricks.comingAt();
+
+count =0
+ intervall = ''
+let seeInterval = ()=>{
+  count++
+  resu = ''
+  for (i=0; i<=10; i++){
+    resu += `${i} ${count} `
+  }
+  console.log(resu)
+}
+intervall = setInterval(seeInterval,1000)
+setTimeout(function (){
+  clearInterval(intervall)
+},2000)
