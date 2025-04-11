@@ -109,5 +109,14 @@
   .is-text-danger{
     color: rgb(180, 45, 45) !important;
   }
+  table,thead,tr,td,th{
+    border: 1px solid;
+    text-align: center;
+    padding: 12px;
+  }
+  table{
+    width: 100%;
+  }
+  
 
 
